@@ -44,6 +44,12 @@ def webhook():
     return json.dumps(results())
 
 
+@app.route('/', methods=['GET'])
+def default():
+    # return response
+    return "all good"
+
+
 # run the app
 if __name__ == '__main__':
     app.run("0.0.0.0", int(os.environ.get('PORT',5000)))
