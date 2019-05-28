@@ -1,6 +1,6 @@
 {
   "name": "CGM Remote Monitor",
-  "repository": "https://github.com/nightscout/cgm-remote-monitor",
+  "repository": "https://github.com/gardero/nightscout-gassistant-bridge",
   "env": {
     "PORT": {
       "description": "Port for the API",
