@@ -1,1 +1,1 @@
-web: python nightscout-gassistant-bridge/__main__.py
+web: python3 nightscout-gassistant-bridge/__main__.py
