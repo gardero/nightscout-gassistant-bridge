@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request
 import json
 import requests
@@ -44,5 +46,5 @@ def webhook():
 
 # run the app
 if __name__ == '__main__':
-    app.run("0.0.0.0", 80)
+    app.run("0.0.0.0", int(os.environ.get('PORT',5000)))
 
