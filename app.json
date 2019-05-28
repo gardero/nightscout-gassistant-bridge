@@ -1,0 +1,21 @@
+{
+  "name": "CGM Remote Monitor",
+  "repository": "https://github.com/nightscout/cgm-remote-monitor",
+  "env": {
+    "PORT": {
+      "description": "Port for the API",
+      "value": "443",
+      "required": true
+    },
+    "NIGHTSCOUT_ADDRESS": {
+      "description": "Nightscout address",
+      "value": "***",
+      "required": true
+    },
+    "NIGHTSCOUT_SECRET": {
+      "description": "Nightscout address",
+      "value": "***",
+      "required": true
+    }
+  }
+}

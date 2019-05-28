@@ -18,7 +18,7 @@ def results():
 
     print(str(req))
 
-    url = "https://test-gardero-nightscout.herokuapp.com/api/v1/entries"
+    url = "%s/api/v1/entries" % os.environ.get('NIGHTSCOUT_ADDRESS')
 
     querystring = {"count":"1"}
 
