@@ -1,1 +1,1 @@
-web: python3 nightscout-gassistant-bridge/__main__.py
+web: gunicorn bridge:bridge
