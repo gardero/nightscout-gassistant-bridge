@@ -14,22 +14,24 @@ def results():
     req = request.get_json(force=True)
 
     # fetch action from json
-    action = req.get('queryResult').get('action')
+    action = req.get('queryResult').get('intent').get('displayName')
 
     print(str(req))
+    print("Intent "+action)
 
-    url = "%s/api/v1/entries" % os.environ.get('NIGHTSCOUT_ADDRESS')
+    if action == "glucose-level":
+        url = "%s/api/v1/entries" % os.environ.get('NIGHTSCOUT_ADDRESS')
 
-    querystring = {"count":"1"}
+        querystring = {"count": "1"}
 
-    headers = {
-        'Accept': "application/json",
-        'Acces': "",
-        'cache-control': "no-cache",
-        'Postman-Token': "8602c936-466f-41b0-9a45-e23099216bcb"
-    }
+        headers = {
+            'Accept': "application/json",
+            'Acces': "",
+            'cache-control': "no-cache",
+            'Postman-Token': "8602c936-466f-41b0-9a45-e23099216bcb"
+        }
 
-    print("calling: "+url)
+        print("calling: " + url)
 
     response = requests.request("GET", url, headers=headers, params=querystring)
 
