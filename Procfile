@@ -1,1 +1,1 @@
-web: python bridge.py
+web: gunicorn bridge:bridge
