@@ -29,6 +29,8 @@ def results():
         'Postman-Token': "8602c936-466f-41b0-9a45-e23099216bcb"
     }
 
+    print("calling: "+url)
+
     response = requests.request("GET", url, headers=headers, params=querystring)
 
     print(response.text)
